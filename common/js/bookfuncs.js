@@ -93,6 +93,8 @@ function createEditors() {
         var theMode = { name: 'python', version: 2, singleLineStringErrors: false };
         if (lang == 'html') {
             theMode = {name: 'htmlmixed'}
+        } else if (lang == 'java') {
+            theMode = {name: 'clike'};
         }
         cm_editors[newEdId] = CodeMirror.fromTextArea(edList[i], {
                                                           mode: theMode,
